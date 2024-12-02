@@ -1,8 +1,16 @@
 #!/bin/bash
 
-exec {FD}< /usr/include/stdio.h
-
-while read -u ${FD} StringaLetta ;
+while read prima seconda terza;
 do
-	echo "ho letto: ${StringaLetta}"
-done
+	if (( ${#terza} > 2 )); then
+		echo "${terza:1:1}"
+	else
+		echo "riga non valida"
+	fi
+#done < /usr/include/stdio.h
+done <<FILE
+uno due tre quattro
+cane lupo lepre gatto
+barca moto b
+casa capanno
+FILE
