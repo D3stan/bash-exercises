@@ -1,0 +1,6 @@
+cane gatto papera	poll* struzzo	pesce coniglio
+c*sa appartamento 	ufficio immobile campo	casetta
+libro penna quaderno     matita gomma     zaino diario
+tavolo sedia lampada     finestra porta   tappeto quadro
+bicicletta auto treno    autobus moto     nave aereo
+
