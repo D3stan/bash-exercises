@@ -5,11 +5,17 @@ if [[ $1 == "" ]]; then
 	exit 1
 fi
 
-exec {FD}< $1
+if [[ -z $FD ]]; then
+	exec {FD}< $1
+	echo created
+else
+	
+fi
 
 read -u $FD riga
 
-echo $riga
-./inverti2.sh $1
-wait
+if (( $? == 0 )); then
+	./inverti2.sh $1
+fi
+
 echo $riga
